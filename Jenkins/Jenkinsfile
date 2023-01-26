@@ -6,7 +6,7 @@ pipeline{
 				          sh '''
 					         echo "building the image" 
 
-						 docker image build -t image2 ${WORKSPACE}/Docker
+						 docker image build -t image2 ${WORKSPACE}/docker
 					     '''
 					}
 
