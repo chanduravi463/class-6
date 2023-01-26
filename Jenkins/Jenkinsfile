@@ -3,8 +3,9 @@ pipeline{
          stages{
             stage('image_build'){
                 steps{
-                    sh ''' echo "building image"
-                    docker image build -t image2 ${WORKSPACE}/docker
+                    sh '''
+		    echo "building image"
+                    docker image build -t image2 ${WORKSPACE}/Docker
                     '''
                 }
             }
@@ -15,9 +16,10 @@ pipeline{
             }
             stage('image_pulling'){
                 steps{
-                    sh ''' docker login -u chanduravi -p Ravi@2021
-					       docker image push chanduravi/image2:latest
-					   '''
+                    sh '''
+		    docker login -u chanduravi -p Ravi@2021
+		    docker image push chanduravi/image2:latest
+		    '''
                 }
             }
             stage('image_deployment'){
