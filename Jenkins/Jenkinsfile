@@ -33,7 +33,7 @@ pipeline{
 		 stage('image_deployment'){
 		                      steps{
 				             sh '''
-					            docker container run -d --name c1 chanduravi/image2:latest
+					            docker container run -it --name c1 chanduravi/image2:latest
 						'''
 
 
