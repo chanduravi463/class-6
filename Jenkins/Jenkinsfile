@@ -24,7 +24,7 @@ pipeline{
             }
             stage('image_deployment'){
                 steps{
-                    sh ' docker container run -it --name c1 chanduravi/image2:latest '
+                    sh ' docker container run -d --name c1 chanduravi/image2:latest '
                 }
             }
          }
